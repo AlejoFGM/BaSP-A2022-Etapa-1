@@ -13,6 +13,8 @@ Task register for employees
 
 ## Week 01
 
+We create the structure of the page with html using the different tags to separate the different sections of the page
+
 ## Week 02
 
 _By Alejo Gonzalez_
