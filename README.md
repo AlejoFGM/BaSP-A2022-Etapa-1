@@ -17,4 +17,6 @@ We create the structure of the page with html using the different tags to separa
 
 ## Week 02
 
+We create a css file to style the different parts of the page
+
 _By Alejo Gonzalez_
