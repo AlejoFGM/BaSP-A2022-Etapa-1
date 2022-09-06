@@ -31,10 +31,8 @@ header h2 {
 }
 
 .header-div {
-    border-top: 1px solid white;
-    height: 2px;    
-    padding: 0;
-    margin: 20px 40px 10px 330px;
+    border-top: 1px solid white;   
+    margin: -9px 30px 0px 330px;
 }
 
 aside {
@@ -45,6 +43,7 @@ aside {
     height: 100%;
     color: white;
     background-color: #373867;
+    z-index: 2;
 }
 
 aside input {
@@ -141,8 +140,7 @@ aside input {
 }
 
 main {
-    margin-top: 100px;
-    margin-left: 350px;
+    margin-left: 330px;       
 }
 
 .trackgenix-section {    
@@ -155,7 +153,8 @@ main {
 }
 
 .trackgenix-text {
-    position: static;      
+    position: relative;
+    top: 40px;      
 }
 
 .trackgenix-text h1 {
@@ -177,10 +176,46 @@ main {
 
 .trackgenix-img {
     position: relative;
-    top: 80px;
-    left: 40px;
-    z-index: 1;            
+    top: 150px;
+    left: 40px;                
+}
+
+.functionalities {
+    margin-bottom: 300px;    
+}
+
+.functionalities h2 {
+    font-size: 32px;
 }
 
 
+.functionalities p {
+    position: relative;
+    left: 260px;
+    bottom: 240px;
+    font-size: 20px;
+}
 
+.functionalities div {
+    display: inline-block;
+    width: 49%;
+}
+
+.report {
+    position: relative;
+    bottom: 36px;    
+}
+
+.multiple {
+    position: relative;
+    bottom: 160px;    
+}
+
+.resource {
+    position: relative;
+    bottom: 120px;    
+}
+
+.functionalities span {
+    font-weight: bold;
+}
