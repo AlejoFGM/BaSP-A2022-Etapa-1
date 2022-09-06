@@ -1,5 +1,5 @@
 body {
-    font-family: 'Robot', sans-serif;
+    font-family: 'Robot', sans-serif;    
 }
 
 header {
@@ -16,7 +16,7 @@ header h2 {
     font-size: 24px;
     text-transform: uppercase;
     position: relative;
-    left: 350px;
+    margin-left: 350px;
 }
 
 .header-icons {    
@@ -140,11 +140,11 @@ aside input {
 }
 
 main {
-    margin-left: 330px;       
+    margin-left: 330px;            
 }
 
 .trackgenix-section {    
-    margin-bottom: 300px;
+    margin-bottom: 300px;    
 }
 
 .trackgenix-section div {
@@ -154,7 +154,7 @@ main {
 
 .trackgenix-text {
     position: relative;
-    top: 40px;      
+    top: 40px;         
 }
 
 .trackgenix-text h1 {
@@ -177,7 +177,7 @@ main {
 .trackgenix-img {
     position: relative;
     top: 150px;
-    left: 40px;                
+    margin-left: 40px;                
 }
 
 .functionalities {
@@ -191,7 +191,7 @@ main {
 
 .functionalities p {
     position: relative;
-    left: 260px;
+    margin-left: 260px;
     bottom: 240px;
     font-size: 20px;
 }
@@ -217,5 +217,49 @@ main {
 }
 
 .functionalities span {
+    font-weight: bold;
+}
+
+.why-trackgenix {
+    position: relative;
+    bottom: 500px;
+}
+
+.why-title h2 {
+    position: relative;
+    margin-left: 420px;
+    bottom: 260px;
+    font-size: 20px;
+}
+
+.why-title span {
+    font-size: 32px;
+}
+
+.why-title img {
+    position: relative;
+    top: 100px;
+}
+
+.why-title {    
+    border-right: 2px solid black;
+    width: 750px;
+    height: 800px;
+}
+
+.why-content {
+    position: relative;    
+    margin-left: 765px;
+    bottom: 800px;
+}
+
+.why-content p {
+    position: relative;
+    margin-left: 130px;
+    bottom: 120px;
+    font-size: 20px;
+}
+
+.why-content span {
     font-weight: bold;
 }
