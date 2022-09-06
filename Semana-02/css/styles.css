@@ -298,14 +298,15 @@ main {
 }
 
 .form-content {
-    width: 750px;
+    width: 700px;
     margin-left: 800px;
     position: relative;
     bottom: 800px;
 }
 
 .form-content h2 {
-    font-size: 32px;
+    font-size: 32px;    
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
 
 .form-content label {
@@ -371,4 +372,46 @@ main {
     border-radius: 1px;
     margin-top: 50px;
     margin-left: 230px;
+}
+
+.about {
+    position: relative;
+    bottom: 1760px;
+    margin-left: 50px;
+}
+
+.about h2 {
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.about h3 {
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.mission-text {
+    float: right;
+    margin-right: 200px;
+}
+
+.mission-text h3 {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.our-history {
+    margin-top: 120px;
+}
+
+.our-history img {
+    float: right;
+    margin-right: 240px;
+}
+
+.our-history h3 {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.history-text {
+    width: 800px;
 }
