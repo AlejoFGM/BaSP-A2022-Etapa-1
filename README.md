@@ -19,4 +19,8 @@ We create the structure of the page with html using the different tags to separa
 
 We create a css file to style the different parts of the page
 
+## Week 03
+
+Make the page responsive with flexbox and media queries
+
 _By Alejo Gonzalez_
