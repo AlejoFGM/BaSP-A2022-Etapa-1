@@ -112,3 +112,104 @@
     flex-direction: row-reverse;
 }
 
+.form {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.form h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.form-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.form-images img {
+    width: 40px;
+    height: 40px;
+    padding: 5%;
+}
+
+.form p {
+    display: none;
+}
+
+.form-content h2 {
+    display: none;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-content div {
+    margin-bottom: 5%;
+}
+
+.form-content form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-content label {
+    font-size: 14px;
+    font-weight: bold;    
+}
+
+.input-name input, .input-email input {           
+    width: 100%;
+    height: 30px;
+    margin-top: 5%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-area div {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 5%;
+    padding-right: 40%;
+}
+
+.input-area input {
+    float: left;    
+}
+
+.input-message textarea {           
+    width: 100%;
+    height: 100px;
+    margin-top: 5%;    
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.form-content button {
+    width: 30%;               
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 1px;
+    background-color: #373867;
+}
