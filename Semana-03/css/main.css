@@ -55,3 +55,60 @@
 .report, .resource {
     flex-direction: row-reverse;
 }
+
+.why-trackgenix {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.why-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.why-title h2 {
+    margin-top: 10%;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+    border-bottom: 2px solid black;
+}
+
+.why-title span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.why-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 90%;      
+    border-bottom: 2px solid #C4C4C4;    
+}
+
+.why-content div {
+    display: flex;
+    align-items: center;
+    margin: 5%;    
+}
+
+.why-content p {
+    font-size: 12px;
+}
+
+.why-content img {
+    width: 50px;
+    height: 50px;
+    padding: 3%;    
+}
+
+.why-page, .why-making {
+    flex-direction: row-reverse;
+}
+
