@@ -1,0 +1,57 @@
+.trackgenix-section {
+    display: flex;
+    flex-direction: column;
+    margin: 4%;    
+}
+
+.trackgenix-section img {
+    border-radius: 10px;
+}
+
+.trackgenix-section h1 {
+    text-transform: uppercase;
+    margin-top: 10%;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.trackgenix-section p {
+    font-size: 16px;
+    line-height: 1.6;    
+}
+
+.trackgenix-section button {
+    display: none;
+}
+
+.functionalities {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2%;
+    padding: 5%;
+    background-color: #DDDDE5;    
+}
+
+.functionalities div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10%;
+    margin: 5%;
+}
+
+.functionalities img {
+    width: 100px;
+    height: 100px;
+    margin-right: 5%;
+}
+
+.functionalities p {
+    font-size: 14px;
+}
+
+.functionalities span {
+    font-weight: bold;
+}
+
+.report, .resource {
+    flex-direction: row-reverse;
+}
