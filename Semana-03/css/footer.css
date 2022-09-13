@@ -47,4 +47,14 @@ footer h2 {
     footer {
         margin-left: 15%;
     }
+
+    footer h2 {
+        padding-top: 4%;
+        border-top: 2px solid #C4C4C4;
+    }
+
+    .footer-text {
+        margin-top: 0;
+        justify-content: right;
+    }    
 }
