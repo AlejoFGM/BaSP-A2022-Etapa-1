@@ -285,6 +285,40 @@
     width: 70%;
 }
 
+@media (min-width: 768px) {
+    .trackgenix-text {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .trackgenix-text p {
+        width: 40%;
+        margin-left: 30%;
+    }
+
+    .trackgenix-text h1 {
+        border-bottom: none;
+    }
+
+    .functionalities h2 {
+        display: flex;
+        justify-content: center;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 2%;
+        border-bottom: 1px solid black;
+    }
+
+    .why-title h2 {
+        border-bottom: none;
+    }
+
+    .why-title {
+        width: 80%;
+        border-bottom: 2px solid #C4C4C4;
+    }
+}
+
 @media (min-width: 1024px) {
     main {
         margin-left: 15%;
