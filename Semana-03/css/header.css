@@ -29,10 +29,21 @@ header {
     display: none;
 }
 
-aside {
-    display: none;
-}
+@media (min-width: 1024px) {
+    .header {
+      margin-left: 15%;
+    }
 
+    .header-icons {
+        display: flex;        
+        justify-content: right;
+        padding-right: 1%;
+    }
+
+    .header-icons img {
+        padding-right: 5%;
+    }
+}
 
 
 

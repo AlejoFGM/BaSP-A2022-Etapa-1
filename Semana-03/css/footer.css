@@ -42,3 +42,9 @@ footer h2 {
     width: 15px;
     padding-right: 2%;
 }
+
+@media (min-width: 1024px) {
+    footer {
+        margin-left: 15%;
+    }
+}
