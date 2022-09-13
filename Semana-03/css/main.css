@@ -30,6 +30,16 @@
     border-radius: 5px;    
 }
 
+
+.functionalities {
+    background-color: #DDDDE5;
+    margin: 2%;
+}
+
+.functionalities h2 {
+    display: none;
+}
+
 .functionalities div {
     display: flex;
     align-items: center;
@@ -264,5 +274,47 @@
 @media (min-width: 1024px) {
     main {
         margin-left: 15%;
+    }
+
+    .trackgenix-section {
+        flex-direction: row-reverse;
+        margin-bottom: 20%;
+    }
+    
+    .trackgenix-section img {
+        width: 50%;
+        height: auto;
+        margin-left: 10%;
+    }
+
+    .trackgenix-text h1 {
+        border-bottom: none;
+    }
+
+    .trackgenix-text button {
+        margin-left: 0;
+        margin-top: 15%;
+    }
+
+    .functionalities {
+        background-color: white;
+    }
+
+    .functionalities h2 {
+        display: flex;
+    }
+    
+    .functionalities-content {        
+        flex-direction: row;
+        flex-wrap: wrap;        
+    }
+
+    .functionalities-content div {        
+        width: 40%;
+    }
+
+    .functionalities-content div img {
+        width: 180px;
+        height: 180px;
     }
 }
