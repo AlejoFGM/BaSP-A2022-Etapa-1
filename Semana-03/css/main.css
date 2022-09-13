@@ -89,7 +89,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     width: 90%;      
-    border-bottom: 2px solid #C4C4C4;    
+    border-bottom: 2px solid #C4C4C4;
 }
 
 .why-content div {
@@ -150,10 +150,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .form-content div {
     margin-bottom: 5%;
+    width: 80%;
 }
 
 .form-content form {
@@ -161,6 +163,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .form-content label {
@@ -184,12 +187,12 @@
 }
 
 .input-area div {
-    width: 100%;
+    width: 40%;
     border: 1px solid black;
     border-radius: 5px;
     margin-bottom: 20px;
-    padding: 5%;
-    padding-right: 40%;
+    padding: 3%;
+    padding-right: 20%;
 }
 
 .input-area input {
@@ -205,11 +208,56 @@
 }
 
 .form-content button {
-    width: 30%;               
+    width: 15%;               
     color: white;
     font-size: 10px;
     font-weight: bold;
     border: 1px solid black;
     border-radius: 1px;
     background-color: #373867;
+}
+
+.about {
+    margin-top: 15%;
+}
+
+.about div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+}
+
+.about h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #C4C4C4;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 5%;
+}
+
+.about div img {
+    width: 40%;
+    height: 20%;
+    margin: 2%;
+}
+
+.mission-h3 {
+    display: flex;
+    justify-content: right;
+    margin-right: 5%;
+}
+
+.history-h3 {
+    display: flex;
+    justify-content: left;
+    margin-left: 5%;
+}
+
+.about p {
+    font-size: 14px;    
 }
