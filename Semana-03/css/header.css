@@ -29,6 +29,13 @@ header {
     display: none;
 }
 
+.header-div {
+    padding-bottom: 2%;
+    margin-left: 5%;
+    margin-right: 5%;   
+    border-top: 2px solid white;
+}
+
 @media (min-width: 1024px) {
     .header {
       margin-left: 15%;

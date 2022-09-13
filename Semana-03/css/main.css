@@ -1,7 +1,7 @@
 .trackgenix-section {
     display: flex;
     flex-direction: column;
-    margin: 4%;    
+    margin: 4%;
 }
 
 .trackgenix-section img {
@@ -16,7 +16,7 @@
 
 .trackgenix-section p {
     font-size: 16px;
-    line-height: 1.6;    
+    line-height: 1.6;
 }
 
 .trackgenix-section button {
@@ -27,9 +27,8 @@
     padding: 2%;
     border: 1px solid black;
     background-color: white;
-    border-radius: 5px;    
+    border-radius: 5px;
 }
-
 
 .functionalities {
     background-color: #DDDDE5;
@@ -97,14 +96,14 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 90%;      
+    width: 90%;
     border-bottom: 2px solid #C4C4C4;
 }
 
 .why-content div {
     display: flex;
     align-items: center;
-    margin: 5%;    
+    margin: 5%;
 }
 
 .why-content p {
@@ -114,7 +113,7 @@
 .why-content img {
     width: 50px;
     height: 50px;
-    padding: 3%;    
+    padding: 3%;
 }
 
 .why-page, .why-making {
@@ -125,7 +124,7 @@
     display: flex;
     flex-direction:column;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 }
 
 .form h2 {
@@ -137,7 +136,7 @@
 .form-images {
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 }
 
 .form-images img {
@@ -177,10 +176,10 @@
 
 .form-content label {
     font-size: 14px;
-    font-weight: bold;    
+    font-weight: bold;
 }
 
-.input-name input, .input-email input {           
+.input-name input, .input-email input {
     width: 100%;
     height: 30px;
     margin-top: 5%;
@@ -205,19 +204,19 @@
 }
 
 .input-area input {
-    float: left;    
+    float: left;
 }
 
-.input-message textarea {           
+.input-message textarea {
     width: 100%;
     height: 100px;
-    margin-top: 5%;    
+    margin-top: 5%;
     border: 1px solid black;
     border-radius: 5px;
 }
 
 .form-content button {
-    width: 15%;               
+    width: 15%;
     color: white;
     font-size: 10px;
     font-weight: bold;
@@ -359,7 +358,7 @@
         margin: 5%;
     }
     
-    .functionalities-content {        
+    .functionalities-content {
         flex-direction: row;
         flex-wrap: wrap;
     }
@@ -380,7 +379,7 @@
 
     .why-trackgenix div {
         display: flex;
-        flex-direction: row;        
+        flex-direction: row;
     }
 
     .why-content {
@@ -389,9 +388,10 @@
     }
 
     .why-title {
-        width: 50%;        
+        width: 50%;
         margin-left: 5%;
         border-right: 1px solid black;
+        border-bottom: none;
     }
 
     .why-title img {
@@ -399,7 +399,7 @@
     }
 
     .why-title h2 {
-        margin-left: 5%;        
+        margin-left: 5%;
         border-bottom: none;
     }
 
@@ -413,7 +413,7 @@
     }
 
     .form p {
-        display: flex;         
+        display: flex;
     }
 
     .form-content h2 {
@@ -427,10 +427,10 @@
 
     .form-info {
         display: flex;
-        flex-direction: column;        
-        width: 40%;        
+        flex-direction: column;
+        width: 40%;
         border-right: 1px solid black;
-        padding-bottom: 30%;        
+        padding-bottom: 30%;
     }
 
     .form-content {

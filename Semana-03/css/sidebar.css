@@ -4,12 +4,12 @@ aside {
     flex-direction: column;
     width: 15%;
     height: 100%;
-    top: 0;    
+    top: 0;
     z-index: 2;
     background-color: #373867;
 }
 
-aside input {    
+aside input {
     width: 80%;
     height: 4%;
     margin-top: 10%;
@@ -22,8 +22,8 @@ aside input {
 .aside-menu {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;    
-    padding: 5%;    
+    justify-content: flex-start;
+    padding: 5%;
 }
 
 .aside-menu h3 {
@@ -35,12 +35,12 @@ aside input {
 
 .aside-menu ul {
     list-style: none;
-    padding-left: 0;    
+    padding-left: 0;
 }
 
 .aside-menu li {
-    margin-top: 10%;    
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);      
+    margin-top: 10%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .aside-menu a {
@@ -66,17 +66,17 @@ aside input {
 .aside-get p {
     color: white;
     font-size: 12px;
-    font-weight: lighter;    
+    font-weight: lighter;
 }
 
 .aside-info {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
 }
 
 .aside-info div {
-    display: flex;    
-    padding: 3%;    
+    display: flex;
+    padding: 3%;
 }
 
 .aside-info img {
@@ -93,6 +93,6 @@ aside input {
 
 @media (min-width: 1024px) {
     aside {
-      display: flex;
+    display: flex;
     }
 }

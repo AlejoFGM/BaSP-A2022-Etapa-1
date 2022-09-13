@@ -23,4 +23,6 @@ We create a css file to style the different parts of the page
 
 Make the page responsive with flexbox and media queries
 
+Git pages: https://alejofgm.github.io/BaSP-A2022-Etapa-1/Semana-03/index.html
+
 _By Alejo Gonzalez_

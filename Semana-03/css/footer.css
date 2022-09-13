@@ -43,6 +43,13 @@ footer h2 {
     padding-right: 2%;
 }
 
+@media (min-width: 768px) {    
+    .footer-text {
+        margin-top: 0;
+        justify-content: right;
+    }
+}
+
 @media (min-width: 1024px) {
     footer {
         margin-left: 15%;
@@ -56,5 +63,5 @@ footer h2 {
     .footer-text {
         margin-top: 0;
         justify-content: right;
-    }    
+    }
 }
