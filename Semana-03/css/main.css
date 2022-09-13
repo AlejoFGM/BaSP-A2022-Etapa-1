@@ -317,4 +317,69 @@
         width: 180px;
         height: 180px;
     }
+
+    .why-trackgenix {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .why-trackgenix div {
+        display: flex;
+        flex-direction: row;        
+    }
+
+    .why-content {
+        width: 40%;
+        border-bottom: none;
+    }
+
+    .why-title {
+        width: 50%;        
+        margin-left: 5%;
+        border-right: 1px solid black;
+    }
+
+    .why-title img {
+        width: 45%;
+    }
+
+    .why-title h2 {
+        margin-left: 5%;        
+        border-bottom: none;
+    }
+
+    .why-content img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .form {
+        flex-direction: row;
+    }
+
+    .form p {
+        display: flex;         
+    }
+
+    .form-content h2 {
+        display: flex;
+        width: 100%;
+        margin-left: 20%;
+        margin-right: 10%;
+        font-size: 24px;
+        border-bottom: 2px solid #C4C4C4;
+    }
+
+    .form-info {
+        display: flex;
+        flex-direction: column;        
+        width: 40%;        
+        border-right: 1px solid black;
+        padding-bottom: 30%;        
+    }
+
+    .form-content {
+        width: 50%;
+    }
+
 }
