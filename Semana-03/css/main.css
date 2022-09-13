@@ -328,6 +328,15 @@
         margin-bottom: 20%;
     }
     
+    .trackgenix-text {
+        display: block;        
+    }
+
+    .trackgenix-text  p {
+        margin-left: 0;
+        width: 70%;
+    }
+
     .trackgenix-section img {
         width: 50%;
         height: auto;
