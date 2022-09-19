@@ -25,4 +25,10 @@ Make the page responsive with flexbox and media queries
 
 Git pages: https://alejofgm.github.io/BaSP-A2022-Etapa-1/Semana-03/index.html
 
+## Week 04
+
+Complete Javascript exercises and make changes to the previous task.
+
+Git pages: https://alejofgm.github.io/BaSP-A2022-Etapa-1/Semana-04/index.html
+
 _By Alejo Gonzalez_
