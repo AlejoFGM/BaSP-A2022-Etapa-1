@@ -61,6 +61,6 @@ console.log('-Exercise 2.f');
 var string4 = 'abcdefghijk lmnopqrstu';
 var index2 = string4.indexOf(' ');
 var string5 = string4.substring(0,1).toUpperCase() + string4.substring(1,index2 - 1) + string4.substring(index2, index2 + 1)
-                + string4.substring(index2 + 1, string4.length);
++ string4.substring(index2 + 1, string4.length);
 
 console.log(string5);

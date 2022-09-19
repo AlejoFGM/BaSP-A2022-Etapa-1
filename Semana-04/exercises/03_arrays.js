@@ -6,8 +6,8 @@ console.log('--EXERCISE 3: ARRAYS');
 
 console.log('-Exercise 3.a');
 
-var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", 
-"Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+var months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 
+'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 
 console.log(months[4], months[10]);
 
@@ -57,8 +57,8 @@ console.log(stringMonths);
 
 console.log('-Exercise 3.g');
 
-months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", 
-"Septiembre", "Octubre", "Noviembre", "Diciembre"];
+months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 
+'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 
 var months2 = months.slice(4,11);
 
