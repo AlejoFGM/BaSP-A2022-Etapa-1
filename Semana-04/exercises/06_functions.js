@@ -97,8 +97,9 @@ function suma (num1, num2) {
         alert('One of the parameters is NaN');
         return NaN;
     }
-    if (validateInteger2(num1, num2)) {
-        return validateInteger2(num1, num2);
+    var isInteger = validateInteger2(num1,num2)
+    if (isInteger) {
+        return isInteger;
     } else {
         return num1 + num2;
     }
