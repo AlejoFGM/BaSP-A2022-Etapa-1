@@ -9,9 +9,12 @@
 }
 
 .trackgenix-section h1 {
-    text-transform: uppercase;
-    margin-top: 10%;
+    text-transform: uppercase;    
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.trackgenix-text {
+    margin-top: 5%;
 }
 
 .trackgenix-section p {
@@ -102,8 +105,7 @@
 
 .why-content div {
     display: flex;
-    align-items: center;
-    margin: 5%;
+    align-items: center;    
 }
 
 .why-content p {
@@ -287,6 +289,7 @@
 @media (min-width: 768px) {
     .trackgenix-text {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
     }
 
@@ -297,6 +300,10 @@
 
     .trackgenix-text h1 {
         border-bottom: none;
+    }
+
+    .trackgenix-section button {
+        margin-left: 0;
     }
 
     .functionalities h2 {
