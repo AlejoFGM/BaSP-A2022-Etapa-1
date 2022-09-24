@@ -31,4 +31,10 @@ Complete Javascript exercises and make changes to the previous task.
 
 Git pages: https://alejofgm.github.io/BaSP-A2022-Etapa-1/Semana-04/index.html
 
+## Week 06
+
+Create log in and signup pages and their functionality with javascript
+
+Git pages: https://alejofgm.github.io/BaSP-A2022-Etapa-1/Semana-06/index.html
+
 _By Alejo Gonzalez_
