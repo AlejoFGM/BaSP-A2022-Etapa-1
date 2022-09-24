@@ -35,6 +35,6 @@ Git pages: https://alejofgm.github.io/BaSP-A2022-Etapa-1/Semana-04/index.html
 
 Create log in and signup pages and their functionality with javascript
 
-Git pages: https://alejofgm.github.io/BaSP-A2022-Etapa-1/Semana-06/index.html
+Git pages: https://alejofgm.github.io/BaSP-A2022-Etapa-1/Semana-06/views/index.html
 
 _By Alejo Gonzalez_

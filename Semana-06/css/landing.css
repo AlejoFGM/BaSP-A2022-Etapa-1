@@ -326,10 +326,6 @@
 }
 
 @media (min-width: 1024px) {
-    main {
-        margin-left: 15%;
-    }
-
     .trackgenix-section {
         flex-direction: row-reverse;
         margin-bottom: 20%;
