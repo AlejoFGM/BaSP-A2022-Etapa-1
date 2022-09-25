@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="../css/login.css">
         <link rel="stylesheet" href="../css/footer.css">
         <link rel="stylesheet" href="../css/sidebar.css">
+        <script src="/Semana-06/javascript/login.js"></script>
     </head>
     <body>
         <header>
@@ -68,29 +69,29 @@
                 <h1>Sign In</h1>
                 <form action="">
                     <div class="mail-login">
-                        <label for="">
+                        <label for="mail">
                             <img src="../assets/mail-login.png" alt="mail icon">
                         </label>
-                        <input type="text">
+                        <input type="text" class="border-none" id="mail">
                     </div>
                     <div class="password-login">
                         <label for="">
                             <img src="../assets/padlock.png" alt="padlock icon">
                         </label>
-                        <input type="password">
+                        <input type="password" class="border-none" id="password">
                     </div>
                     <div class="remember-me">
                         <div class="remember-checkbox">
                             <label for="">Remember me</label>
-                            <input type="checkbox">
+                            <input type="checkbox" class="border-none">
                         </div>
                         <div>
                             <a href="">Forgot password?</a>
                         </div>
                     </div>
                 </form>
-                <button>Continue</button>
-            </section>            
+                <button id="login-button">Continue</button>
+            </section>
         </main>
         <footer>
             <h2>Trackgenix</h2>
@@ -130,7 +131,7 @@
                 <img src="../assets/linkedin_black.png" alt="linkedin logo">
                 <img src="../assets/github.png" alt="github logo">
             </div>
-            <div class="div-footer"></div>
-        </footer>
+            <div class="div-footer"></div>            
+        </footer>        
     </body>
 </html>
