@@ -48,6 +48,14 @@ form {
     background-color: #373867;
 }
 
+.error {    
+    border: 2px solid red;
+}
+
+.succes {    
+    border: 2px solid green;
+}
+
 @media (min-width: 1024px) {
     form {
         flex-direction: row;
