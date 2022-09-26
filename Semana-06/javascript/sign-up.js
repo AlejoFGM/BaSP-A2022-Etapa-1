@@ -158,4 +158,80 @@ window.onload = function() {
             address.classList.add("succes");
         }
     }
+
+    var location = document.getElementById("location");
+    var locationExp = /^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ]{3,}$/;
+
+    function validateLocation() {
+        if(locationExp.test(location.value)) {
+            return true;
+        } else return false;
+    }
+
+    location.onfocus = function() {
+        location.classList.remove("succes");
+        location.classList.remove("error");
+    }
+
+    location.onblur = function() {
+        if(!validateLocation()) {
+            location.classList.remove("succes");
+            location.classList.add("error");
+        }
+        if(validateLocation()) {
+            location.classList.remove("error");
+            location.classList.add("succes");
+        }
+    }
+
+    var postalCode = document.getElementById("postal-code");
+    var postalCodeExp = /^[0-9]{4,5}$/;
+
+    function validatePostalCode() {
+        if(postalCodeExp.test(postalCode.value)) {
+            return true;
+        } else return false;
+    }
+
+    postalCode.onfocus = function() {
+        postalCode.classList.remove("succes");
+        postalCode.classList.remove("error");
+    }
+
+    postalCode.onblur = function() {
+        if(!validatePostalCode()) {
+            postalCode.classList.remove("succes");
+            postalCode.classList.add("error");
+        }
+        if(validatePostalCode()) {
+            postalCode.classList.remove("error");
+            postalCode.classList.add("succes");
+        }
+    }
+
+    var email = document.getElementById("email");
+    var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+
+    function validateEmail() {
+        if(emailExpression.test(email.value)) {
+            return true;
+        } else return false;
+    }
+
+    email.onfocus = function() {
+        email.classList.add("border-none");
+    }
+
+    email.onblur = function() {
+        if(!validateEmail()) {
+            email.classList.remove("succes")
+            email.classList.remove("border-none");
+            email.classList.add("error");
+        }
+        if(validateEmail()){
+            email.classList.remove("error");
+            email.classList.remove("border-none");
+            email.classList.add("succes");
+        }
+    }
 }
