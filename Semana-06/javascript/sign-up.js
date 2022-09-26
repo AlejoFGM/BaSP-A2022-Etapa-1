@@ -286,4 +286,17 @@ window.onload = function() {
             repeatPassword.classList.add("succes");
         }
     }
+
+    var button = document.getElementById("sign-up-button");
+
+    button.onclick = function() {
+        if(validateName() && validateLastName() && validateDni() && validateDate() && validatePhone() && validateAddress() &&
+        validateLocation() && validatePostalCode() && validateEmail() && validatePassword() && validateRepeatPassword()) {
+            alert('Name: ' + name.value + '\n Last Name: ' + lastName.value + '\n DNI: ' + dni.value + '\n Date off Birth: ' + date.value +
+            '\n Phone: ' + phone.value + '\n Address: ' + address.value + '\n Location: ' + location.value + '\n Postal Code: ' + postalCode.value +
+            '\n Email: ' + email.value + '\n Password: ' + password.value + '\n Repeat Password: ' + repeatPassword.value);
+        } else {
+            alert('Invalid input, check');
+        }
+    }
 }
