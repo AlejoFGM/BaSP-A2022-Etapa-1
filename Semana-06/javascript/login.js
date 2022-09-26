@@ -35,7 +35,7 @@ window.onload = function() {
     }
 
     password.onfocus = function() {
-        mail.classList.add("border-none");
+        password.classList.add("border-none");
     }
 
     password.onblur = function() {

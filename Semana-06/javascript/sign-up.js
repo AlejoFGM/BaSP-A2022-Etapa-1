@@ -234,4 +234,56 @@ window.onload = function() {
             email.classList.add("succes");
         }
     }
+
+    var password = document.getElementById("password");
+    var passExpression = /^(?=[A-Za-z]+[0-9]|[0-9]+[A-Za-z])[A-Za-z0-9]{8,}$/;
+
+    function validatePassword() {
+        if(passExpression.test(password.value)) {
+            return true;
+        } else return false;
+    }
+
+    password.onfocus = function() {
+        password.classList.add("border-none");
+    }
+
+    password.onblur = function() {
+        if(!validatePassword()) {
+            password.classList.remove("succes")
+            password.classList.remove("border-none");
+            password.classList.add("error");
+        }
+        if(validatePassword()){
+            password.classList.remove("error");
+            password.classList.remove("border-none");
+            password.classList.add("succes");
+        }
+    }
+
+    var repeatPassword = document.getElementById("repeat-password");
+    var repeatPasswordExpression = /^(?=[A-Za-z]+[0-9]|[0-9]+[A-Za-z])[A-Za-z0-9]{8,}$/;
+
+    function validateRepeatPassword() {
+        if(repeatPasswordExpression.test(repeatPassword.value) && password.value === repeatPassword.value) {
+            return true;
+        } else return false;
+    }
+
+    repeatPassword.onfocus = function() {
+        repeatPassword.classList.add("border-none");
+    }
+
+    repeatPassword.onblur = function() {
+        if(!validateRepeatPassword()) {
+            repeatPassword.classList.remove("succes")
+            repeatPassword.classList.remove("border-none");
+            repeatPassword.classList.add("error");
+        }
+        if(validateRepeatPassword()){
+            repeatPassword.classList.remove("error");
+            repeatPassword.classList.remove("border-none");
+            repeatPassword.classList.add("succes");
+        }
+    }
 }
