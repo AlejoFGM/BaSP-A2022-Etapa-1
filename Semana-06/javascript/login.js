@@ -25,15 +25,34 @@ window.onload = function() {
         }
     }
 
-    var password = document.getElementById("password");
-    var passExpression = /^(?=[A-Za-z]+[0-9]|[0-9]+[A-Za-z])[A-Za-z0-9]+$/;
+    var password = document.getElementById("password");    
+    var passExp2 = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789';
+    var numbers = '0123456789';
+    var abc = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
 
     function validatePassword() {
-        if(passExpression.test(password.value)) {
-            return true;
-        } else return false;
+        var arrayNum = [];
+        var arrayAbc = [];
+        for (let i = 0; i < password.value.length; i++) {
+            if(!passExp2.includes(password.value[i])) {
+                return false;
+            }
+            if(numbers.includes(password.value[i])) {
+                arrayNum.push(password.value[i]);
+            }
+            if(abc.includes(password.value[i])) {
+                arrayAbc.push(password.value[i]);
+            }
+        }        
+        if(!password.value) {
+            return false;
+        }
+        if(arrayAbc.length === 0 || arrayNum.length === 0) {
+            return false;
+        }
+        return true;
     }
-
+    
     password.onfocus = function() {
         password.classList.add("border-none");
     }

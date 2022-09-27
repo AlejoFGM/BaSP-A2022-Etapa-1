@@ -1,11 +1,20 @@
 window.onload = function() {
     var name = document.getElementById("name");
-    var nameExp = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ]{3,}$/;
+    var abc = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
+    var numbers = '0123456789';
+    var numbersLetters = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789';
+    var numbersLettersSpace = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789 ';
 
-    function validateName() {
-        if(nameExp.test(name.value)) {
-            return true;
-        } else return false;
+    function validateName() {        
+        for (let i = 0; i < name.value.length; i++) {
+            if(!abc.includes(name.value[i])) {
+                return false;
+            }
+        }
+        if(name.value.length < 4) {
+            return false;
+        }
+        return true;
     }
 
     name.onfocus = function() {
@@ -25,12 +34,17 @@ window.onload = function() {
     }
 
     var lastName = document.getElementById("last-name");
-    var lastNameExp = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ]{3,}$/;
 
-    function validateLastName() {
-        if(lastNameExp.test(lastName.value)) {
-            return true;
-        } else return false;
+    function validateLastName() {        
+        for (let i = 0; i < lastName.value.length; i++) {
+            if(!abc.includes(lastName.value[i])) {
+                return false;
+            }
+        }
+        if(lastName.value.length < 4) {
+            return false;
+        }
+        return true;
     }
 
     lastName.onfocus = function() {
@@ -50,12 +64,17 @@ window.onload = function() {
     }
 
     var dni = document.getElementById("dni");
-    var dniExp = /^[0-9]{7,}$/;
-
-    function validateDni() {
-        if(dniExp.test(dni.value)) {
-            return true;
-        } else return false;
+    
+    function validateDni() {        
+        for (let i = 0; i < dni.value.length; i++) {
+            if(!numbers.includes(dni.value[i])) {
+                return false;
+            }
+        }
+        if(dni.value.length < 8) {
+            return false;
+        }
+        return true;
     }
 
     dni.onfocus = function() {
@@ -110,12 +129,17 @@ window.onload = function() {
     }
 
     var phone = document.getElementById("phone");
-    var phoneExp = /^[0-9]{10,10}$/;
-
-    function validatePhone() {
-        if(phoneExp.test(phone.value)) {
-            return true;
-        } else return false;
+    
+    function validatePhone() {        
+        for (let i = 0; i < phone.value.length; i++) {
+            if(!numbers.includes(phone.value[i])) {
+                return false;
+            }
+        }
+        if(phone.value.length != 10) {
+            return false;
+        }
+        return true;
     }
 
     phone.onfocus = function() {
@@ -135,13 +159,34 @@ window.onload = function() {
     }
 
     var address = document.getElementById("address");
-    var addressExp = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ]+[\s]+[0-9]+$/;
 
     function validateAddress() {
-        if(addressExp.test(address.value)) {
-            return true;
-        } else return false;
+        var arrayNum = [];
+        var arrayAbc = [];
+        for (let i = 0; i < address.value.length; i++) {
+            if(!numbersLettersSpace.includes(address.value[i])) {
+                return false;
+            }
+            if(numbers.includes(address.value[i])) {
+                arrayNum.push(address.value[i]);
+            }
+            if(abc.includes(address.value[i])) {
+                arrayAbc.push(address.value[i]);
+            }
+        }
+        if(address.value.length < 5) {
+            return false;
+        }
+        if(arrayAbc.length === 0 || arrayNum.length === 0) {
+            return false;
+        }
+        var addresSplit = address.value.split(' ');
+        if(!addresSplit[0] || !addresSplit[1]) {
+            return false;
+        }
+        return true;
     }
+    
 
     address.onfocus = function() {
         address.classList.remove("succes");
@@ -160,12 +205,17 @@ window.onload = function() {
     }
 
     var location = document.getElementById("location");
-    var locationExp = /^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ]{3,}$/;
 
-    function validateLocation() {
-        if(locationExp.test(location.value)) {
-            return true;
-        } else return false;
+    function validateLocation() {        
+        for (let i = 0; i < location.value.length; i++) {
+            if(!numbersLetters.includes(location.value[i])) {
+                return false;
+            }
+        }
+        if(location.value.length < 4) {
+            return false
+        }
+        return true;
     }
 
     location.onfocus = function() {
@@ -185,12 +235,17 @@ window.onload = function() {
     }
 
     var postalCode = document.getElementById("postal-code");
-    var postalCodeExp = /^[0-9]{4,5}$/;
 
-    function validatePostalCode() {
-        if(postalCodeExp.test(postalCode.value)) {
+    function validatePostalCode() {        
+        for (let i = 0; i < postalCode.value.length; i++) {
+            if(!numbers.includes(postalCode.value[i])) {
+                return false;
+            }
+        }
+        if(postalCode.value.length === 4 || postalCode.value.length === 5) {
             return true;
-        } else return false;
+        }
+        return false;
     }
 
     postalCode.onfocus = function() {
@@ -236,12 +291,28 @@ window.onload = function() {
     }
 
     var password = document.getElementById("password");
-    var passExpression = /^(?=[A-Za-z]+[0-9]|[0-9]+[A-Za-z])[A-Za-z0-9]{8,}$/;
 
     function validatePassword() {
-        if(passExpression.test(password.value)) {
-            return true;
-        } else return false;
+        var arrayNum = [];
+        var arrayAbc = [];
+        for (let i = 0; i < password.value.length; i++) {
+            if(!numbersLetters.includes(password.value[i])) {
+                return false;
+            }
+            if(numbers.includes(password.value[i])) {
+                arrayNum.push(password.value[i]);
+            }
+            if(abc.includes(password.value[i])) {
+                arrayAbc.push(password.value[i]);
+            }
+        }        
+        if(password.value.length < 8) {
+            return false;
+        }
+        if(arrayAbc.length === 0 || arrayNum.length === 0) {
+            return false;
+        }
+        return true;
     }
 
     password.onfocus = function() {
@@ -262,12 +333,31 @@ window.onload = function() {
     }
 
     var repeatPassword = document.getElementById("repeat-password");
-    var repeatPasswordExpression = /^(?=[A-Za-z]+[0-9]|[0-9]+[A-Za-z])[A-Za-z0-9]{8,}$/;
 
     function validateRepeatPassword() {
-        if(repeatPasswordExpression.test(repeatPassword.value) && password.value === repeatPassword.value) {
-            return true;
-        } else return false;
+        var arrayNum = [];
+        var arrayAbc = [];
+        for (let i = 0; i < password.value.length; i++) {
+            if(!numbersLetters.includes(password.value[i])) {
+                return false;
+            }
+            if(numbers.includes(password.value[i])) {
+                arrayNum.push(password.value[i]);
+            }
+            if(abc.includes(password.value[i])) {
+                arrayAbc.push(password.value[i]);
+            }
+        }        
+        if(password.value.length < 8) {
+            return false;
+        }
+        if(arrayAbc.length === 0 || arrayNum.length === 0) {
+            return false;
+        }
+        if(password.value != repeatPassword.value) {
+            return false;
+        }
+        return true;
     }
 
     repeatPassword.onfocus = function() {
