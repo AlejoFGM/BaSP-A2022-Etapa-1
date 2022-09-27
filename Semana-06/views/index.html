@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="../css/landing.css">
         <link rel="stylesheet" href="../css/footer.css">
         <link rel="stylesheet" href="../css/sidebar.css">
+        <script src="../javascript/contact.js"></script>
     </head>
     <body>
         <header>
@@ -178,11 +179,11 @@
                     <form action="" method="post">
                         <div class="input-name">
                             <label>Name:</label>
-                            <input type="text">
+                            <input type="text" class="input-border" id="name">
                         </div>
                         <div class="input-email">
                             <label>Email:</label>
-                            <input type="text">
+                            <input type="text" class="input-border" id="email">
                         </div>
                         <div class="form-area">
                             <label>Select an area:</label>
@@ -203,10 +204,10 @@
                         </div>
                         <div class="input-message">
                             <label>Message:</label>
-                            <textarea name="message"></textarea>
+                            <textarea name="message" class="input-border" id="message"></textarea>
                         </div>
                     </form>
-                    <button>Submit</button>
+                    <button id="form-button">Submit</button>
                 </div>
             </section>
             <section class="about">
