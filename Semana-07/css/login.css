@@ -80,6 +80,11 @@ h1 {
     background-color: #373867;
 }
 
+.login p {
+    font-size: 14px;
+    color: red;
+}
+
 .error {    
     border: 2px solid red;
 }

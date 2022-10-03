@@ -48,6 +48,13 @@ form {
     background-color: #373867;
 }
 
+.sign-up p {
+    font-size: 14px;
+    color: red;
+    margin-top: 4%;
+    margin-bottom: 0%;
+}
+
 .error {    
     border: 2px solid red;
 }

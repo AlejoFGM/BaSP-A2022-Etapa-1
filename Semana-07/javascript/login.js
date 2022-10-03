@@ -15,6 +15,7 @@ window.onload = function() {
 
     mail.onfocus = function() {
         mail.classList.add("border-none");
+        document.getElementById("email-msg").innerHTML = '';
     }
 
     mail.onblur = function() {
@@ -22,11 +23,13 @@ window.onload = function() {
             mail.classList.remove("succes")
             mail.classList.remove("border-none");
             mail.classList.add("error");
+            document.getElementById("email-msg").innerHTML = 'Invalid Email';
         }
         if(validateMail()){
             mail.classList.remove("error");
             mail.classList.remove("border-none");
             mail.classList.add("succes");
+            document.getElementById("email-msg").innerHTML = '';
         }
     }
 
@@ -55,6 +58,7 @@ window.onload = function() {
     
     password.onfocus = function() {
         password.classList.add("border-none");
+        document.getElementById("pass-msg").innerHTML = '';
     }
 
     password.onblur = function() {
@@ -62,11 +66,13 @@ window.onload = function() {
             password.classList.remove("succes")
             password.classList.remove("border-none");
             password.classList.add("error");
+            document.getElementById("pass-msg").innerHTML = 'Invalid Password';
         }
         if(validatePassword()){
             password.classList.remove("error");
             password.classList.remove("border-none");
             password.classList.add("succes");
+            document.getElementById("pass-msg").innerHTML = '';
         }
     }
 

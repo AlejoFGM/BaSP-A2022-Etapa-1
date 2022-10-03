@@ -44,16 +44,19 @@ window.onload = function() {
     name.onfocus = function() {
         name.classList.remove("succes");
         name.classList.remove("error");
+        document.getElementById("name-msg").innerHTML = '';
     }
 
     name.onblur = function() {
         if(!validateName()) {
             name.classList.remove("succes");
             name.classList.add("error");
+            document.getElementById("name-msg").innerHTML = 'Invalid Name';
         }
         if(validateName()) {
             name.classList.remove("error");
             name.classList.add("succes");
+            document.getElementById("name-msg").innerHTML = '';
         }
     }
 
@@ -72,16 +75,19 @@ window.onload = function() {
     lastName.onfocus = function() {
         lastName.classList.remove("succes");
         lastName.classList.remove("error");
+        document.getElementById("last-msg").innerHTML = '';
     }
 
     lastName.onblur = function() {
         if(!validateLastName()) {
             lastName.classList.remove("succes");
             lastName.classList.add("error");
+            document.getElementById("last-msg").innerHTML = 'Invalid Last Name';
         }
         if(validateLastName()) {
             lastName.classList.remove("error");
             lastName.classList.add("succes");
+            document.getElementById("last-msg").innerHTML = '';
         }
     }
 
@@ -100,16 +106,19 @@ window.onload = function() {
     dni.onfocus = function() {
         dni.classList.remove("succes");
         dni.classList.remove("error");
+        document.getElementById("dni-msg").innerHTML = '';
     }
 
     dni.onblur = function() {
         if(!validateDni()) {
             dni.classList.remove("succes");
             dni.classList.add("error");
+            document.getElementById("dni-msg").innerHTML = 'Invalid DNI';
         }
         if(validateDni()) {
             dni.classList.remove("error");
             dni.classList.add("succes");
+            document.getElementById("dni-msg").innerHTML = '';
         }
     }
 
@@ -133,16 +142,19 @@ window.onload = function() {
     date.onfocus = function() {
         date.classList.remove("succes");
         date.classList.remove("error");
+        document.getElementById("date-msg").innerHTML = '';
     }
 
     date.onblur = function() {
         if(validateDate()) {
             date.classList.remove("error");
             date.classList.add("succes");
+            document.getElementById("date-msg").innerHTML = '';
         }
         if(!validateDate()) {
             date.classList.remove("succes");
             date.classList.add("error");
+            document.getElementById("date-msg").innerHTML = 'Invalid Date';
         }
     }
 
@@ -161,16 +173,19 @@ window.onload = function() {
     phone.onfocus = function() {
         phone.classList.remove("succes");
         phone.classList.remove("error");
+        document.getElementById("phone-msg").innerHTML = '';
     }
 
     phone.onblur = function() {
         if(!validatePhone()) {
             phone.classList.remove("succes");
             phone.classList.add("error");
+            document.getElementById("phone-msg").innerHTML = 'Invalid Phone';
         }
         if(validatePhone()) {
             phone.classList.remove("error");
             phone.classList.add("succes");
+            document.getElementById("phone-msg").innerHTML = '';
         }
     }
 
@@ -205,16 +220,19 @@ window.onload = function() {
     address.onfocus = function() {
         address.classList.remove("succes");
         address.classList.remove("error");
+        document.getElementById("address-msg").innerHTML = '';
     }
 
     address.onblur = function() {
         if(!validateAddress()) {
             address.classList.remove("succes");
             address.classList.add("error");
+            document.getElementById("address-msg").innerHTML = 'Invalid Address';
         }
         if(validateAddress()) {
             address.classList.remove("error");
             address.classList.add("succes");
+            document.getElementById("address-msg").innerHTML = '';
         }
     }
 
@@ -240,16 +258,19 @@ window.onload = function() {
     location.onfocus = function() {
         location.classList.remove("succes");
         location.classList.remove("error");
+        document.getElementById("location-msg").innerHTML = '';
     }
 
     location.onblur = function() {
         if(!validateLocation()) {
             location.classList.remove("succes");
             location.classList.add("error");
+            document.getElementById("location-msg").innerHTML = 'Invalid Location';
         }
         if(validateLocation()) {
             location.classList.remove("error");
             location.classList.add("succes");
+            document.getElementById("location-msg").innerHTML = '';
         }
     }
 
@@ -268,16 +289,19 @@ window.onload = function() {
     postalCode.onfocus = function() {
         postalCode.classList.remove("succes");
         postalCode.classList.remove("error");
+        document.getElementById("zip-msg").innerHTML = '';
     }
 
     postalCode.onblur = function() {
         if(!validatePostalCode()) {
             postalCode.classList.remove("succes");
             postalCode.classList.add("error");
+            document.getElementById("zip-msg").innerHTML = 'Invalid Postal Code';
         }
         if(validatePostalCode()) {
             postalCode.classList.remove("error");
             postalCode.classList.add("succes");
+            document.getElementById("zip-msg").innerHTML = '';
         }
     }
 
@@ -288,19 +312,21 @@ window.onload = function() {
     }
 
     email.onfocus = function() {
-        email.classList.add("border-none");
+        email.classList.remove("succes");
+        email.classList.remove("error");
+        document.getElementById("email-msg").innerHTML = '';
     }
 
     email.onblur = function() {
         if(!validateEmail()) {
-            email.classList.remove("succes")
-            email.classList.remove("border-none");
+            email.classList.remove("succes");
             email.classList.add("error");
+            document.getElementById("email-msg").innerHTML = 'Invalid Email';
         }
         if(validateEmail()){
             email.classList.remove("error");
-            email.classList.remove("border-none");
             email.classList.add("succes");
+            document.getElementById("email-msg").innerHTML = '';
         }
     }
 
@@ -328,19 +354,21 @@ window.onload = function() {
     }
 
     password.onfocus = function() {
-        password.classList.add("border-none");
+        password.classList.remove("succes");
+        password.classList.remove("error");
+        document.getElementById("pass-msg").innerHTML = '';
     }
 
     password.onblur = function() {
         if(!validatePassword()) {
-            password.classList.remove("succes")
-            password.classList.remove("border-none");
+            password.classList.remove("succes");
             password.classList.add("error");
+            document.getElementById("pass-msg").innerHTML = 'Invalid Password';
         }
         if(validatePassword()){
             password.classList.remove("error");
-            password.classList.remove("border-none");
             password.classList.add("succes");
+            document.getElementById("pass-msg").innerHTML = '';
         }
     }
 
@@ -371,7 +399,9 @@ window.onload = function() {
     }
 
     repeatPassword.onfocus = function() {
-        repeatPassword.classList.add("border-none");
+        repeatPassword.classList.remove("succes");
+        repeatPassword.classList.remove("error");
+        document.getElementById("rpass-msg").innerHTML = '';
     }
 
     repeatPassword.onblur = function() {
@@ -379,11 +409,13 @@ window.onload = function() {
             repeatPassword.classList.remove("succes")
             repeatPassword.classList.remove("border-none");
             repeatPassword.classList.add("error");
+            document.getElementById("rpass-msg").innerHTML = 'Invalid Repeat Password';
         }
         if(validateRepeatPassword()){
             repeatPassword.classList.remove("error");
             repeatPassword.classList.remove("border-none");
             repeatPassword.classList.add("succes");
+            document.getElementById("rpass-msg").innerHTML = '';
         }
     }
 
