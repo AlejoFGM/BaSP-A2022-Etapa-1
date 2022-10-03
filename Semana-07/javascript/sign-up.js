@@ -1,11 +1,35 @@
 window.onload = function() {
     var name = document.getElementById("name");
+    var lastName = document.getElementById("last-name");
+    var dni = document.getElementById("dni");
+    var date = document.getElementById("date");
+    var phone = document.getElementById("phone");
+    var address = document.getElementById("address");
+    var location = document.getElementById("location");
+    var postalCode = document.getElementById("postal-code");
+    var email = document.getElementById("email");
+    var password = document.getElementById("password");
+    var repeatPassword = document.getElementById("repeat-password");
+    var button = document.getElementById("sign-up-button");
+    var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
     var abc = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
     var numbers = '0123456789';
     var numbersLetters = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789';
     var numbersLettersSpace = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789 ';
 
-    function validateName() {        
+    name.value = localStorage.getItem('name');
+    lastName.value = localStorage.getItem('lastName');
+    dni.value = localStorage.getItem('dni');
+    date.value = localStorage.getItem('dob');
+    phone.value = localStorage.getItem('phone');
+    address.value = localStorage.getItem('address');
+    location.value = localStorage.getItem('city');
+    postalCode.value = localStorage.getItem('zip');
+    email.value = localStorage.getItem('email');
+    password.value = localStorage.getItem('password');
+    repeatPassword.value = localStorage.getItem('repeatPassword');
+
+    function validateName() {
         for (let i = 0; i < name.value.length; i++) {
             if(!abc.includes(name.value[i])) {
                 return false;
@@ -32,8 +56,6 @@ window.onload = function() {
             name.classList.add("succes");
         }
     }
-
-    var lastName = document.getElementById("last-name");
 
     function validateLastName() {        
         for (let i = 0; i < lastName.value.length; i++) {
@@ -63,8 +85,6 @@ window.onload = function() {
         }
     }
 
-    var dni = document.getElementById("dni");
-    
     function validateDni() {        
         for (let i = 0; i < dni.value.length; i++) {
             if(!numbers.includes(dni.value[i])) {
@@ -92,8 +112,6 @@ window.onload = function() {
             dni.classList.add("succes");
         }
     }
-
-    var date = document.getElementById("date");
 
     function calculateAge(date) {
         var today = new Date();
@@ -128,8 +146,6 @@ window.onload = function() {
         }
     }
 
-    var phone = document.getElementById("phone");
-    
     function validatePhone() {        
         for (let i = 0; i < phone.value.length; i++) {
             if(!numbers.includes(phone.value[i])) {
@@ -157,8 +173,6 @@ window.onload = function() {
             phone.classList.add("succes");
         }
     }
-
-    var address = document.getElementById("address");
 
     function validateAddress() {
         var arrayNum = [];
@@ -204,8 +218,6 @@ window.onload = function() {
         }
     }
 
-    var location = document.getElementById("location");
-
     function validateLocation() {
         var arrayAbc = [];
         for (let i = 0; i < location.value.length; i++) {
@@ -241,8 +253,6 @@ window.onload = function() {
         }
     }
 
-    var postalCode = document.getElementById("postal-code");
-
     function validatePostalCode() {        
         for (let i = 0; i < postalCode.value.length; i++) {
             if(!numbers.includes(postalCode.value[i])) {
@@ -271,9 +281,6 @@ window.onload = function() {
         }
     }
 
-    var email = document.getElementById("email");
-    var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-
     function validateEmail() {
         if(emailExpression.test(email.value)) {
             return true;
@@ -296,8 +303,6 @@ window.onload = function() {
             email.classList.add("succes");
         }
     }
-
-    var password = document.getElementById("password");
 
     function validatePassword() {
         var arrayNum = [];
@@ -338,8 +343,6 @@ window.onload = function() {
             password.classList.add("succes");
         }
     }
-
-    var repeatPassword = document.getElementById("repeat-password");
 
     function validateRepeatPassword() {
         var arrayNum = [];
@@ -383,8 +386,6 @@ window.onload = function() {
             repeatPassword.classList.add("succes");
         }
     }
-
-    var button = document.getElementById("sign-up-button");
 
     button.onclick = function() {
         var errors = [];
@@ -433,6 +434,17 @@ window.onload = function() {
                 })
                 .then(function(data) {
                     if(data.success) {
+                        localStorage.setItem('name', name.value);
+                        localStorage.setItem('lastName', lastName.value);
+                        localStorage.setItem('dni', dni.value);
+                        localStorage.setItem('dob', date.value);
+                        localStorage.setItem('phone', phone.value);
+                        localStorage.setItem('address', address.value);
+                        localStorage.setItem('city', location.value);
+                        localStorage.setItem('zip', postalCode.value);
+                        localStorage.setItem('email', email.value);
+                        localStorage.setItem('password', password.value);
+                        localStorage.setItem('repeatPassword', repeatPassword.value);
                         alert('Msg: ' + data.msg + '\nName: ' + name.value + '\nLast Name: ' + lastName.value + '\nDNI: ' + dni.value
                         + '\nDate: ' + date.value + '\nPhone: ' + phone.value + '\nAddress: ' + address.value 
                         + '\nLocation: ' + location.value + '\nPostal Code: ' + postalCode.value + '\nEmail: ' + email.value
