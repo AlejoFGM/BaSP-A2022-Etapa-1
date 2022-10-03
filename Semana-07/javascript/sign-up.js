@@ -206,14 +206,21 @@ window.onload = function() {
 
     var location = document.getElementById("location");
 
-    function validateLocation() {        
+    function validateLocation() {
+        var arrayAbc = [];
         for (let i = 0; i < location.value.length; i++) {
             if(!numbersLetters.includes(location.value[i])) {
                 return false;
             }
+            if(abc.includes(location.value[i])) {
+                arrayAbc.push(location.value[i]);
+            }
         }
         if(location.value.length < 4) {
-            return false
+            return false;
+        }
+        if(arrayAbc.length < 4) {
+            return false;
         }
         return true;
     }
@@ -380,13 +387,71 @@ window.onload = function() {
     var button = document.getElementById("sign-up-button");
 
     button.onclick = function() {
-        if(validateName() && validateLastName() && validateDni() && validateDate() && validatePhone() && validateAddress() &&
-        validateLocation() && validatePostalCode() && validateEmail() && validatePassword() && validateRepeatPassword()) {
-            alert('Name: ' + name.value + '\n Last Name: ' + lastName.value + '\n DNI: ' + dni.value + '\n Date off Birth: ' + date.value +
-            '\n Phone: ' + phone.value + '\n Address: ' + address.value + '\n Location: ' + location.value + '\n Postal Code: ' + postalCode.value +
-            '\n Email: ' + email.value + '\n Password: ' + password.value + '\n Repeat Password: ' + repeatPassword.value);
+        var errors = [];
+        if(!validateName()) {
+            errors.push('Invalid Name');
+        }
+        if(!validateLastName()) {
+            errors.push('Invalid Last Name');
+        }
+        if(!validateDni()) {
+            errors.push('Invalid DNI');
+        }
+        if(!validateDate()) {
+            errors.push('Invalid Date');
+        }
+        if(!validatePhone()) {
+            errors.push('Invalid Phone');
+        }
+        if(!validateAddress()) {
+            errors.push('Invalid Address');
+        }
+        if(!validateLocation()) {
+            errors.push('Invalid Location');
+        }
+        if(!validatePostalCode()) {
+            errors.push('Invalid Postal Code');
+        }
+        if(!validateEmail()) {
+            errors.push('Invalid Email');
+        }
+        if(!validatePassword()) {
+            errors.push('Invalid Password');
+        }
+        if(!validateRepeatPassword()) {
+            errors.push('Invalid Repeat Password');
+        }
+        if(!errors.length) {
+            var arrayDate = date.value.split('-');
+            var formatDate = arrayDate[1] + '/' + arrayDate[2] + '/' + arrayDate[0];
+            var request = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' + name.value + '&lastName=' + lastName.value +
+            '&dni=' + dni.value + '&dob=' + formatDate + '&phone=' + phone.value + '&address=' + address.value + '&city=' + location.value +
+            '&zip=' + postalCode.value + '&email=' + email.value + '&password=' + password.value + '&password=' + repeatPassword.value;
+            fetch(request)
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(data) {
+                    if(data.success) {
+                        alert('Msg: ' + data.msg + '\nName: ' + name.value + '\nLast Name: ' + lastName.value + '\nDNI: ' + dni.value
+                        + '\nDate: ' + date.value + '\nPhone: ' + phone.value + '\nAddress: ' + address.value 
+                        + '\nLocation: ' + location.value + '\nPostal Code: ' + postalCode.value + '\nEmail: ' + email.value
+                        + '\nPassword: ' + password.value + '\nRepeat Password: ' + repeatPassword.value);
+                    } else if (data.msg) {
+                        alert('Error: ' + data.msg);
+                    } else if (data.errors){
+                        var errorMsg = []
+                        for (var i=0; i<data.errors.length; i++) {
+                            errorMsg.push(data.errors[i].msg);
+                        }
+                        alert(errorMsg.join('\n'));
+                    }
+                })
+                .catch(function(error) {
+                    alert('Error: ' + error);
+                });
         } else {
-            alert('Invalid input, check');
+            alert(errors.join('\n'));
         }
     }
 }
