@@ -85,6 +85,7 @@ window.onload = function() {
             errors.push('Invalid mail');
         }
         if(!errors.length) {
+            alert('Email: ' + mail.value + '\nPassword: ' + password.value);
             var request = 'https://basp-m2022-api-rest-server.herokuapp.com/login?email=' + mail.value + '&password=' + password.value;
             fetch(request)
                 .then(function(response) {

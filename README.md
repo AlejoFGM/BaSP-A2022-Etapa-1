@@ -37,4 +37,10 @@ Create log in and signup pages and their functionality with javascript
 
 Git pages: https://alejofgm.github.io/BaSP-A2022-Etapa-1/Semana-06/views/index.html
 
+## Week 07
+
+Make an HTTP request through the fetch method to send the form data
+
+Git pages: https://alejofgm.github.io/BaSP-A2022-Etapa-1/Semana-07/views/index.html
+
 _By Alejo Gonzalez_

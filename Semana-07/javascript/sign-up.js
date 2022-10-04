@@ -135,8 +135,11 @@ window.onload = function() {
 
     function validateDate() {
         if(calculateAge(date.value) < 18) {
-            return false
-        } return true
+            return false;
+        }
+        if(!date.value) {
+            return false;
+        } else return true;
     }
 
     date.onfocus = function() {
@@ -455,6 +458,10 @@ window.onload = function() {
             errors.push('Invalid Repeat Password');
         }
         if(!errors.length) {
+            alert('Name: ' + name.value + '\nLast Name: ' + lastName.value + '\nDNI: ' + dni.value
+            + '\nDate: ' + date.value + '\nPhone: ' + phone.value + '\nAddress: ' + address.value 
+            + '\nLocation: ' + location.value + '\nPostal Code: ' + postalCode.value + '\nEmail: ' + email.value
+            + '\nPassword: ' + password.value + '\nRepeat Password: ' + repeatPassword.value);
             var arrayDate = date.value.split('-');
             var formatDate = arrayDate[1] + '/' + arrayDate[2] + '/' + arrayDate[0];
             var request = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' + name.value + '&lastName=' + lastName.value +
